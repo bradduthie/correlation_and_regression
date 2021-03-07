@@ -515,7 +515,7 @@ abline(a = B0, b = B1, lwd = 2);
 
 Note that even if our assumptions are not perfectly met (indeed, they rarely if ever will be), this does not completely invalidate the method of linear regression. In reality, linear regression is often robust to minor deviations from the above assumptions (as are other statistical tools), but large violations of one or more of these assumptions might indeed invalidate the use of linear regression. Being able to assess and analyse the statistical and practical validity of a regression is a skill. Statistical tools such as SPSS can calculate regression equations and provide additional information to help assess how well the regression equation models the data.
 
-Staistical Validity: how good is the fit of the model?
+Statistical Validity: how good is the fit of the model?
 --------------------------------------------------------------------------------
 
 We often want to know how well a regression line fits to the data. The standard method for determining this is the **coefficient of determination** ($R^{2}$). The $R^{2}$ tells us **how much of the variation in y is explained by the reression equation**. For example, if $R^{2} = 0.83$, then 83\% of the variation in y is accounted for by the fitted regression line. You can think about the $R^{2}$, visually, as how tightly the data points in a scatterplot fit to the regression line. See the examples below of four different $R^{2}$ values to see what this looks like.
