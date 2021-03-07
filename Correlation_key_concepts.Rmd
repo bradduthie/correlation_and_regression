@@ -1,0 +1,92 @@
+---
+title: "Introduction to correlation"
+output:
+  beamer_presentation:
+    theme: "default"
+    colortheme: "default"
+    fonttheme: "default"
+  ioslides_presentation: default
+  slidy_presentation: default
+header-includes:
+- \usepackage{hyperref}
+- \usepackage{caption}
+- \definecolor{links}{HTML}{2A1B81}
+- \hypersetup{colorlinks,linkcolor=,urlcolor=links}
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+---
+
+```{r, echo = FALSE}
+library(knitr);
+opts_chunk$set(echo = FALSE);
+```
+
+
+## Introduction to correlation
+
+We often want to investigate the relationship between pairs of variables.
+
+- Vegetation height and mean annual temperature
+- Animal body size and metabolic rate
+- Number of automobiles in a location and carbon emissions
+
+The **correlation** between pairs of variables, such as those listed above, describes how the variation of each variable is related to the other variable.
+
+## Visualising the correlation between two variables
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.cap= "Two plots of hypothetical variables illustrating a positive (left) and negative correlation"}
+rho1 <- 0.9;
+Z1   <- rnorm(n = 16, mean = 0, sd = 1);
+Z2   <- rnorm(n = 16, mean = 0, sd = 1);
+X1   <- Z1 + 10;
+Y1   <- rho1 * Z1 + sqrt(1 - rho1*rho1) * Z2 + 10;
+par(mfrow = c(1, 2), mar = c(5, 2, 1, 0.5));
+plot(x = X1, y = Y1, pch = 20, xlab = "X value", ylab = "Y value", cex = 1.5,
+     xlim = c(7, 13), ylim = c(7, 13), xaxt = "n", yaxt = "n", cex.lab = 1.25,
+     line = 1);
+rho1 <- -0.9;
+Z1   <- rnorm(n = 16, mean = 0, sd = 1);
+Z2   <- rnorm(n = 16, mean = 0, sd = 1);
+X1   <- Z1 + 10;
+Y1   <- rho1 * Z1 + sqrt(1 - rho1*rho1) * Z2 + 10;
+plot(x = X1, y = Y1, pch = 20, xlab = "X value", cex = 1.5, line = 1, 
+     xlim = c(7, 13), ylim = c(7, 13), xaxt = "n", yaxt = "n", cex.lab = 1.25,
+     ylab = "Y value");
+```
+
+
+
+## Visualising two variables that are not correlated
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.cap = "A plot of two hypothetical variables that are not correlated."}
+X1 <- rnorm(n = 24, mean = 0, sd = 1);
+Y1 <- rnorm(n = 24, mean = 0, sd = 1);
+while(abs(cor(X1, Y1)) > 0.002){
+  X1 <- rnorm(n = 24, mean = 0, sd = 1);
+  Y1 <- rnorm(n = 24, mean = 0, sd = 1);
+}
+plot(x = X1, y = Y1, pch = 20, xlab = "X value", cex = 1.5, xlim = c(-3, 3),
+     ylim = c(-3, 3), xaxt = "n", yaxt = "n", cex.lab = 1.25, ylab = "Y value",
+     line = 1);
+```
+
+
+## Getting a more intuitive sense of correlation
+
+
+Formalised with the **correlation coefficient** (*r*)
+
+- Provides a statistical measure of strength and direction of correlation
+- Only describes association between variables (**not** cause and effect)
+
+The value *r* ranges between -1 and 1
+
+- Negative numbers indicate a negative correlation
+- Positive numbers indicate a positive correlation
+- Avalue of zero indicates no correlation
+
+We can get a more intuitive understanding of the correlation coefficient with **[[this application](https://bradduthie.shinyapps.io/corr_click/)]**.
+
+
