@@ -3,9 +3,9 @@ title: "Lecture 11"
 subtitle: "Correlation and Introduction to Regression"
 output:
   html_document: default
+  pdf_document: default
   word_document:
     reference_docx: docx_template.docx
-  pdf_document: default
 linkcolor: blue
 bibliography: refs.bib
 ---
@@ -701,12 +701,13 @@ In the figure above, the solid sloped line in blue shows the linear regression w
 Conveniently, $R^{2}$ is also just the Pearson product moment correlation (*r*) squared. This should make some intuitive sense. When two variables are more strongly correlated (i.e., r is near -1 or 1), the are also distributed more tightly around the regression line (see the figure above). **You do not need to know the mathematical definition of the coefficient of determination or how to calculate it**, but these details might help you understand what this coefficient is doing more clearly.
 
 
-Staistical Validity: testing the significance of the regression and parameters
+Statistical Validity: testing the significance of the regression and parameters
 --------------------------------------------------------------------------------
 
 We can test the significance of our overall regression model using an F-test of overall significance. This F-test determines whether or not our linear regression provides a better fit to the data than a model that does not contain any independent variables (i.e., a model that just predicts the mean value of y instead of using the regression coefficients a and b). We can state the null and alternative hypotheses below.
 
 **Hypothesis for F-test of overall significance of a linear model**
+
 - **Null:** The model with no independent variables fits the data as well as the linear model.
 - **Alternative:** The linear model fits the data better than the model with no independent variables.
 
@@ -715,6 +716,7 @@ The F-test calculates an F value that can be compared to an F distribution to ge
 We can also test the significance of individual parameters in the linear model (a and b; recall that y = a + bx). For both coefficients a and b, we can state the null and alternative hypotheses below.
 
 **Hypothesis for coefficient of a linear model**
+
 - **Null:** The value of the coefficient equals 0.
 - **Alternative:** The value of the coefficient does not equal 0.
 

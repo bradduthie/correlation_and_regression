@@ -23,7 +23,7 @@ opts_chunk$set(echo = FALSE);
 ```
 
 
-# Testing whether or not a correlation is signficant
+# Testing whether or not a correlation is significant
 
 **Null Hypothesis**: There is no correlation between two variables X and Y
 
@@ -34,7 +34,7 @@ opts_chunk$set(echo = FALSE);
 To test whether or not to reject the null hypothesis, we can obtain a p-value in SPSS or use a table of critical values to look up the value of *r* for a specific degrees of freedom
 
 
-# Testing whether or not a correlation is signficant
+# Testing whether or not a correlation is significant
 
 We often want to test whether or not the correlation between two variables is significant
 

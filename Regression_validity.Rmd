@@ -133,7 +133,7 @@ points(x = X1, y = Y1, pch = 20, xlab = "Independent Variable X", cex = 1.5,
      ylab = "Dependent Variable Y", yaxs = "i", xaxs = "i");
 text(x = 2, hjust = 0, y = 9, labels = "SS_res = 26.73", cex = 1.5, 
      col = "blue");
-text(x = 2, hjust = 0, y = 8, labels = "SS_res = 28.82", cex = 1.5, 
+text(x = 2, hjust = 0, y = 8, labels = "SS_tot = 28.82", cex = 1.5, 
      col = "red");
 ```
 
